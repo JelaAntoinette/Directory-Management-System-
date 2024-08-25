@@ -1,14 +1,18 @@
 #include <iostream>
 
 using namespace std;
-void showFileListMenu();
+
+void showFileListMenu() {
+    cout << "Showing file list menu...\n";
+    
+}
 
 int main() {
     int choice;
 
     do {
         cout << endl
-        	<< " ---------------\n"
+             << " ---------------\n"
              << "MAIN MENU\n"
              << "---------------\n"
              << "1 - List files in the current directory\n"
@@ -18,26 +22,26 @@ int main() {
              << "Enter your choice and press return: ";
         cin >> choice;
 
- switch (choice) {
+        switch (choice) {
             case 1: {
                 showFileListMenu();
                 break;
+            } 
             case 2:
-        		cout << "Creating new directory.....>\n";
-        		break;
-        	case 3:
-        		cout << "Changing working directory......\n";
-        		break;
-        	case 4:
-        		cout << "Press any key to ext\n";
-        		break;
-        	default:
-        		cout << "Invalid choice. Please try again";
-        		break;
-
-            
+                cout << "Creating new directory.....>\n";
+                break;
+            case 3:
+                cout << "Changing working directory......\n";
+                break;
+            case 4:
+                cout << "Press any key to exit\n";
+                break;
+            default:
+                cout << "Invalid choice. Please try again.\n";
+                break;
         }
     } while (choice != 4);
 
     return 0;
-	}
+}
+
