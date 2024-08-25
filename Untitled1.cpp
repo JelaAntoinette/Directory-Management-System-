@@ -8,9 +8,9 @@ void showDirectoryMenu() {
     int dirChoice;
 
     cout << endl
-         << "---------------\n"
-         << "DIRECTORY MANAGEMENT MENU\n"
-         << "---------------\n"
+         << "-----------------\n"
+         << "LIST FILE DETAIL\n"
+         << "-----------------\n"
          << "1 - List all files\n"
          << "2 - List files based on a specific extension\n"
          << "3 - List files based on a pattern\n"
