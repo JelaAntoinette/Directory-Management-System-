@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstdlib>  
+#include <cstdlib>
 #include <string>
 
 using namespace std;
@@ -8,12 +8,12 @@ void showDirectoryMenu() {
     int dirChoice;
 
     cout << endl
-         << "-----------------\n"
-         << "LIST FILE DETAIL\n"
-         << "-----------------\n"
-         << "1 - List all files\n"
-         << "2 - List files based on a specific extension\n"
-         << "3 - List files based on a pattern\n"
+         << "---------------------\n"
+         << "   LIST FILE DETAIL   \n"
+         << "---------------------\n"
+         << "1.List all Files\n"
+         << "2.List of Extension files\n"
+         << "3.List of Name files\n"
          << "Enter your choice and press return: ";
     cin >> dirChoice;
 
@@ -51,11 +51,11 @@ void changeDirectoryMenu() {
 
     cout << endl
          << "----------------------\n"
-         << "CHANGE DIRECTORY MENU\n"
+         << "   CHANGE DIRECTORY MENU   \n"
          << "----------------------\n"
-         << "1 - Move one step back (to the parent directory)\n"
-         << "2 - Move to the root directory\n"
-         << "3 - Move to a specific directory\n"
+         << "1.Move one step back (to the parent directory)\n"
+         << "2.Move to the root directory\n"
+         << "3.Move to a specific directory\n"
          << "Enter your choice and press return: ";
     cin >> changeDirChoice;
 
@@ -88,18 +88,33 @@ void changeDirectoryMenu() {
     }
 }
 
+void createDirectory() {
+    string directoryName;
+
+    cout << "Enter the name of the new directory: ";
+    cin.ignore();  
+    getline(cin, directoryName);
+    
+    string command = "mkdir \"" + directoryName + "\"";
+    if (system(command.c_str()) == 0) {
+        cout << "Directory created successfully: " << directoryName << endl;
+    } else {
+        cout << "Failed to create directory: " << directoryName << endl;
+    }
+}
+
 int main() {
     int choice;
 
     do {
         cout << endl
-             << " ---------------\n"
-             << "MAIN MENU\n"
-             << "---------------\n"
-             << "1 - Manage directories\n"
-             << "2 - Create a new directory\n"
-             << "3 - Change the working directory\n"
-             << "4 - Exit the program\n"
+             << " ----------------\n"
+             << "    MAIN MENU    \n"
+             << "------------------\n"
+             << "1.To display list of files\n"
+             << "2.To create a new directory\n"
+             << "3.To change the Working directory\n"
+             << "4.Exit the program\n"
              << "Enter your choice and press return: ";
         cin >> choice;
 
@@ -109,7 +124,7 @@ int main() {
                 break;
             }
             case 2:
-                cout << "Creating new directory.....>\n";
+                createDirectory();
                 break;
             case 3:
                 changeDirectoryMenu();
@@ -125,5 +140,4 @@ int main() {
 
     return 0;
 }
-
 
