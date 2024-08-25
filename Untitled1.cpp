@@ -14,7 +14,7 @@ void showDirectoryMenu() {
          << "1.List all Files\n"
          << "2.List of Extension files\n"
          << "3.List of Name files\n"
-         << "Enter your choice and press return: ";
+         << "Enter the number: ";
     cin >> dirChoice;
 
     switch (dirChoice) {
@@ -56,7 +56,7 @@ void changeDirectoryMenu() {
          << "1.Move one step back (to the parent directory)\n"
          << "2.Move to the root directory\n"
          << "3.Move to a specific directory\n"
-         << "Enter your choice and press return: ";
+         << "Enter the number: ";
     cin >> changeDirChoice;
 
     switch (changeDirChoice) {
@@ -97,7 +97,7 @@ void createDirectory() {
     
     string command = "mkdir \"" + directoryName + "\"";
     if (system(command.c_str()) == 0) {
-        cout << "Directory created successfully: " << directoryName << endl;
+        cout << "Directory successfully created: " << directoryName << endl;
     } else {
         cout << "Failed to create directory: " << directoryName << endl;
     }
@@ -114,8 +114,8 @@ int main() {
              << "1.To display list of files\n"
              << "2.To create a new directory\n"
              << "3.To change the Working directory\n"
-             << "4.Exit the program\n"
-             << "Enter your choice and press return: ";
+             << "4.Exit\n"
+             << "Enter the number: ";
         cin >> choice;
 
         switch (choice) {
