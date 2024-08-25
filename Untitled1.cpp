@@ -45,3 +45,32 @@ int main() {
     return 0;
 }
 
+void showDirectoryMenu() {
+    int dirChoice;
+
+    cout << endl
+         << "---------------\n"
+         << "DIRECTORY MANAGEMENT MENU\n"
+         << "---------------\n"
+         << "1 - List all files\n"
+         << "2 - List files based on a specific extension\n"
+         << "3 - List files based on a pattern\n"
+         << "Enter your choice and press return: ";
+    cin >> DIRChoice;
+
+    switch (DIRChoice) {
+        case 1:
+            cout << "Listing all files...\n";
+            break;
+        case 2:
+            cout << "Listing files based on extension...\n";
+            break;
+        case 3:
+            cout << "Listing files based on a pattern...\n";
+            break;
+        default:
+            cout << "Invalid choice in directory management menu.\n";
+            break;
+    }
+}
+
