@@ -53,25 +53,30 @@ void changeDirectoryMenu() {
     cout << "----------------------\n";
     cout << "   CHANGE DIRECTORY   \n";
     cout << "----------------------\n";
-    cout << "1. Move one step back (to the parent directory)\n";
-    cout << "2. Move to the root directory\n";
-    cout << "3. Move to a specific directory\n";
+    cout << "1. Step by step backward \n";
+    cout << "2. Go to root directory\n";
+    cout << "3. Forward directory\n";
     cout << "Enter the number: ";
     cin >> changeDirChoice;
 
     switch (changeDirChoice) {
         case 1: {
-            cout << "Moving one step back...\n";
+            cout << "Step by step backward...\n";
             system("cd ..");
             break;
         }
         case 2: {
-            cout << "Moving to the root directory...\n";
+            cout << "Go to root directory...\n";
             system("cd \\");
             break;
         }
-        case 3: {
-            cout << "Enter the directory path: ";
+        case3: {
+        	cout << "Forward directory";
+        	system("cd \\");
+			break;
+		}
+        case 4: {
+            cout << "Pls enter the directory name: ";
             cin.ignore();  
             getline(cin, directory);
             string command = "cd \"" + directory + "\"";
