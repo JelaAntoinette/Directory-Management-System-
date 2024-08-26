@@ -7,14 +7,14 @@ using namespace std;
 void showDirectoryMenu() {
     int dirChoice;
 
-    cout << endl
-         << "---------------------\n"
-         << "   LIST FILE DETAIL   \n"
-         << "---------------------\n"
-         << "1.List all Files\n"
-         << "2.List of Extension files\n"
-         << "3.List of Name files\n"
-         << "Enter the number: ";
+    cout << endl;
+    cout << "---------------------\n";
+    cout << "   LIST FILE DETAIL   \n";
+    cout << "---------------------\n";
+    cout << "1. List all Files\n";
+    cout << "2. List files by Extension\n";
+    cout << "3. List files by Name\n";
+    cout     << "Enter the number: ";
     cin >> dirChoice;
 
     switch (dirChoice) {
@@ -49,14 +49,14 @@ void changeDirectoryMenu() {
     int changeDirChoice;
     string directory;
 
-    cout << endl
-         << "----------------------\n"
-         << "   CHANGE DIRECTORY MENU   \n"
-         << "----------------------\n"
-         << "1.Move one step back (to the parent directory)\n"
-         << "2.Move to the root directory\n"
-         << "3.Move to a specific directory\n"
-         << "Enter the number: ";
+    cout << endl;
+    cout << "----------------------\n";
+    cout << "   CHANGE DIRECTORY   \n";
+    cout << "----------------------\n";
+    cout << "1. Move one step back (to the parent directory)\n";
+    cout << "2. Move to the root directory\n";
+    cout << "3. Move to a specific directory\n";
+    cout << "Enter the number: ";
     cin >> changeDirChoice;
 
     switch (changeDirChoice) {
@@ -107,22 +107,21 @@ int main() {
     int choice;
 
     do {
-        cout << endl
-             << " ----------------\n"
-             << "    MAIN MENU    \n"
-             << "------------------\n"
-             << "1.To display list of files\n"
-             << "2.To create a new directory\n"
-             << "3.To change the Working directory\n"
-             << "4.Exit\n"
-             << "Enter the number: ";
+        cout << endl;
+        cout << " ----------------\n";
+        cout << "    MAIN MENU    \n";
+        cout << "------------------\n";
+        cout << "1. Display list of files\n";
+        cout << "2. Create a new directory\n";
+        cout << "3. Change the working directory\n";
+        cout << "4. Exit\n";
+        cout   << "Enter the number: ";
         cin >> choice;
 
         switch (choice) {
-            case 1: {
+            case 1:
                 showDirectoryMenu();
                 break;
-            }
             case 2:
                 createDirectory();
                 break;
